@@ -25,14 +25,15 @@ function App() {
 
   const filteredCharacters = listCharacters
   .filter((character)=> character.name.toLowerCase().includes(filters.name))
-  .filter(()=>)
+  
+  const searchedName = filters.name;
 
   return (
     <>
     <Header/>
     <main className="main"> 
       <Routes>
-        <Route path="/" element={<Home listCharacters={filteredCharacters} changeFilters={changeFilters}/>} />
+        <Route path="/" element={<Home listCharacters={filteredCharacters} changeFilters={changeFilters} searchedName={searchedName}/>} />
         
       </Routes>
     </main>
