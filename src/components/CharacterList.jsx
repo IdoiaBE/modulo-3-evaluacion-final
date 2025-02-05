@@ -1,8 +1,12 @@
 import "../styles/CharacterList.scss"
+import CharacterCard from "./CharacterCard"
 
-function CharacterList() {
+function CharacterList({listCharacters}) {
+
   return (
-    <div>CharacterList</div>
+    <section className="main_list">
+      {listCharacters.map(eachCharacter => <CharacterCard key={eachCharacter.id} eachCharacter={eachCharacter}/>)}
+    </section>
   )
 }
 

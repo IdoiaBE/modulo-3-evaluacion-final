@@ -1,9 +1,12 @@
 import CharacterList from "./CharacterList"
+import PropTypes from "prop-types"
 
-function Home() {
+function Home({listCharacters}) {
   return (
-    <CharacterList/>
+    <CharacterList listCharacters={listCharacters}/>
   )
 }
+
+// Home.PropTypes
 
 export default Home
