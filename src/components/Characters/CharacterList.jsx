@@ -2,11 +2,13 @@ import "../../styles/CharacterList.scss"
 import CharacterCard from "./CharacterCard"
 import PropTypes from "prop-types"
 
-function CharacterList({listCharacters, searchedName}) {
+function CharacterList({listCharacters, filters}) {
+  const searchedName = filters.name;
+
   if (listCharacters.length === 0) {
     return (
       <section className="main_list">
-        <p>No hay ningún personaje que coincida con {searchedName}</p>
+        <p>No hay ningún personaje que se llame {searchedName}</p>
       </section>
     )
   }
@@ -20,7 +22,7 @@ function CharacterList({listCharacters, searchedName}) {
 
 CharacterList.propTypes = {
   listCharacters: PropTypes.array,
-  searchedName: PropTypes.string,
+  filters: PropTypes.object,
 }
 
 export default CharacterList

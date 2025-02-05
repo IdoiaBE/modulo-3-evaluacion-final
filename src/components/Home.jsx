@@ -1,12 +1,12 @@
-import CharacterList from "./Characters/CharacterList"
+import CharacterList from "./characters/CharacterList"
 import PropTypes from "prop-types"
-import Filters from "./Filters/Filters"
+import Filters from "./filters/Filters"
 
-function Home({listCharacters, changeFilters, searchedName}) {
+function Home({listCharacters, changeFilters, filters}) {
   return (
     <>
-    <Filters changeFilters={changeFilters}/>
-    <CharacterList listCharacters={listCharacters} searchedName={searchedName}/>
+    <Filters changeFilters={changeFilters} filters={filters}/>
+    <CharacterList listCharacters={listCharacters} filters={filters}/>
     </>
   )
 }
@@ -14,7 +14,7 @@ function Home({listCharacters, changeFilters, searchedName}) {
 Home.propTypes = {
   listCharacters: PropTypes.array,
   changeFilters: PropTypes.func,
-  searchedName: PropTypes.string,
+  filters: PropTypes.object,
 }
 
 export default Home

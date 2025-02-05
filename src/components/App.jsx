@@ -6,6 +6,7 @@ import '../styles/App.scss';
 import Header from './Header';
 import Home from './Home';
 import getDataApi from '../services/api';
+import CharacterDetail from './characters/CharacterDetail';
 
 
 function App() {
@@ -26,14 +27,16 @@ function App() {
   const filteredCharacters = listCharacters
   .filter((character)=> character.name.toLowerCase().includes(filters.name))
   
-  const searchedName = filters.name;
 
   return (
     <>
     <Header/>
     <main className="main"> 
       <Routes>
-        <Route path="/" element={<Home listCharacters={filteredCharacters} changeFilters={changeFilters} searchedName={searchedName}/>} />
+        <Route path="/" element={<Home listCharacters={filteredCharacters} changeFilters={changeFilters}
+        filters={filters}/>} />
+
+        <Route path="/character/:characterId" element={<CharacterDetail/>}/>
         
       </Routes>
     </main>
