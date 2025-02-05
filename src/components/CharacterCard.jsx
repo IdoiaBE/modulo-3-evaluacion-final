@@ -1,4 +1,4 @@
-import "../styles/CharacterCard.scss"
+import PropTypes from "prop-types"
 
 function CharacterCard({eachCharacter}) {
   const placeholderImg = `https://placehold.co/300x400?text=${eachCharacter.name}`
@@ -14,6 +14,10 @@ function CharacterCard({eachCharacter}) {
       <p>{eachCharacter.species}</p>
     </article>
   )
+}
+
+CharacterCard.PropTypes ={
+  eachCharacter: PropTypes.object,
 }
 
 export default CharacterCard

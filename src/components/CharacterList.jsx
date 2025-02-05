@@ -1,5 +1,6 @@
 import "../styles/CharacterList.scss"
 import CharacterCard from "./CharacterCard"
+import PropTypes from "prop-types"
 
 function CharacterList({listCharacters}) {
 
@@ -8,6 +9,10 @@ function CharacterList({listCharacters}) {
       {listCharacters.map(eachCharacter => <CharacterCard key={eachCharacter.id} eachCharacter={eachCharacter}/>)}
     </section>
   )
+}
+
+CharacterList.PropTypes = {
+  listCharacters: PropTypes.array,
 }
 
 export default CharacterList

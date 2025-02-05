@@ -7,6 +7,8 @@ function Home({listCharacters}) {
   )
 }
 
-// Home.PropTypes
+Home.PropTypes = {
+  listCharacters: PropTypes.array,
+}
 
 export default Home
