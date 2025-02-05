@@ -16,7 +16,7 @@ function CharacterCard({eachCharacter}) {
   )
 }
 
-CharacterCard.PropTypes ={
+CharacterCard.prototypes ={
   eachCharacter: PropTypes.object,
 }
 

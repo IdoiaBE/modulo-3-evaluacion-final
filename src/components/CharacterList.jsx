@@ -11,7 +11,7 @@ function CharacterList({listCharacters}) {
   )
 }
 
-CharacterList.PropTypes = {
+CharacterList.propTypes = {
   listCharacters: PropTypes.array,
 }
 
