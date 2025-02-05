@@ -5,9 +5,11 @@ const getDataApi = (selectedHouse)=> {
         // console.log("API'S response", data)
 
         const cleanData = data.map((item) =>{
+            const placeholderImg = `https://placehold.co/300x400?text=${item.name}`
+
             return {
                 id: item.id,
-                img: item.image,
+                img: item.image || placeholderImg,
                 name: item.name,
                 alive: item.alive,
                 species: item.species,

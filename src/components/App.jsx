@@ -1,5 +1,5 @@
 
-import { Route, Routes } from 'react-router-dom';
+import { matchPath, Route, Routes, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import '../styles/App.scss';
@@ -26,7 +26,12 @@ function App() {
 
   const filteredCharacters = listCharacters
   .filter((character)=> character.name.toLowerCase().includes(filters.name))
+
+  const {pathname} = useLocation()
+  const characterRouteMatch = matchPath("/character/:characterId", pathname)
+  const characterUrlId = characterRouteMatch ? characterRouteMatch.params.characterId : null;
   
+  //console.log(characterRouteMatch)
 
   return (
     <>
@@ -36,7 +41,7 @@ function App() {
         <Route path="/" element={<Home listCharacters={filteredCharacters} changeFilters={changeFilters}
         filters={filters}/>} />
 
-        <Route path="/character/:characterId" element={<CharacterDetail/>}/>
+        <Route path="/character/:characterId" element={<CharacterDetail listCharacters={filteredCharacters} characterId={characterUrlId}/>}/>
         
       </Routes>
     </main>
