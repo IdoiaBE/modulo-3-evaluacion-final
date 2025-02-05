@@ -9,9 +9,8 @@ import getDataApi from '../services/api';
 
 
 function App() {
-  const [listCharacters, setListCharacters] = useState ();
+  const [listCharacters, setListCharacters] = useState ([]);
 
-  // getDataApi ("gryffindor")
   useEffect (()=>{
     getDataApi("gryffindor").then(data => setListCharacters(data))
   }, [])
@@ -23,7 +22,7 @@ function App() {
     <Header/>
     <main className="main"> 
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<Home listCharacters={listCharacters}/>} />
         
       </Routes>
     </main>
