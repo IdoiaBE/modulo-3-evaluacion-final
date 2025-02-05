@@ -1,6 +1,6 @@
-import CharacterList from "./CharacterList"
+import CharacterList from "./Characters/CharacterList"
 import PropTypes from "prop-types"
-import Filters from "./Filters"
+import Filters from "./Filters/Filters"
 
 function Home({listCharacters, changeFilters, searchedName}) {
   return (

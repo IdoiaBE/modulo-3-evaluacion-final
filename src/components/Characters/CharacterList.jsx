@@ -1,4 +1,4 @@
-import "../styles/CharacterList.scss"
+import "../../styles/CharacterList.scss"
 import CharacterCard from "./CharacterCard"
 import PropTypes from "prop-types"
 

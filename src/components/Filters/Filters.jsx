@@ -1,6 +1,6 @@
-import "../styles/Filters.scss"
-import FilterHouse from "./FilterHouse"
-import FilterName from "./FilterName"
+import "../../styles/Filters.scss"
+import FilterHouse from "../Filters/FilterHouse"
+import FilterName from "../Filters/FilterName"
 import PropTypes from "prop-types"
 
 function Filters({changeFilters}) {
