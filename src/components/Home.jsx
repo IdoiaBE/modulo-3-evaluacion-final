@@ -2,10 +2,10 @@ import CharacterList from "./CharacterList"
 import PropTypes from "prop-types"
 import Filters from "./Filters"
 
-function Home({listCharacters}) {
+function Home({listCharacters, changeFilters}) {
   return (
     <>
-    <Filters/>
+    <Filters changeFilters={changeFilters}/>
     <CharacterList listCharacters={listCharacters}/>
     </>
   )
@@ -13,6 +13,7 @@ function Home({listCharacters}) {
 
 Home.propTypes = {
   listCharacters: PropTypes.array,
+  changeFilters: PropTypes.func,
 }
 
 export default Home

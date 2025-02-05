@@ -11,30 +11,28 @@ import getDataApi from '../services/api';
 function App() {
   const [listCharacters, setListCharacters] = useState ([]);
   const [filters, setFilters] = useState({
-    byName: "",
-    byHouse: "",
+    name: "",
+    house: "gryffindor",
   })
 
   useEffect (()=>{
-    getDataApi("gryffindor").then(data => setListCharacters(data))
-  }, [])
+    getDataApi(filters.house).then(data => setListCharacters(data))
+  }, [filters.house])
 
   const changeFilters = (key, value) =>{
-    if(key === "name"){
-      setFilters({...filters, byName: value})
-    } else{
-      setFilters({...filters, byHouse: value})
-    }
+    setFilters({...filters, [key]: value})
   }
- 
-  
+
+  const filteredCharacters = listCharacters
+  .filter((character)=> character.name.toLowerCase().includes(filters.name))
+  .filter(()=>)
 
   return (
     <>
     <Header/>
     <main className="main"> 
       <Routes>
-        <Route path="/" element={<Home listCharacters={listCharacters}/>} />
+        <Route path="/" element={<Home listCharacters={filteredCharacters} changeFilters={changeFilters}/>} />
         
       </Routes>
     </main>
