@@ -1,9 +1,21 @@
 
+import { Route, Routes } from 'react-router-dom';
 import '../styles/App.scss';
+import Header from './Header';
+import Home from './Home';
 
 function App() {
   return (
-    <h1>template</h1>
+    <>
+    <Header/>
+    <main className="main"> 
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        
+      </Routes>
+    </main>
+    </>
+
   );
 }
 
