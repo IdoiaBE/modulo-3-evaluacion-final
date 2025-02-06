@@ -75,7 +75,7 @@ npm run build
 npm run deploy
 ```
 
-3. Publica la carpeta `dist/` en GitHub Pages:
+3. Publica en GitHub Pages:
 
 - Ve a la pestaña "Settings" de tu repositorio.
 - Entra en **Pages**, en el menú de la izquierda.

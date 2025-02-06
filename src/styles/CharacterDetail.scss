@@ -1,3 +1,7 @@
+.main_detail i{
+    color: white;
+    margin-left: -50%;
+}
 
 .detail_back{
     margin-left: -250px;
@@ -43,12 +47,13 @@
 .card{
     width: 60%;
     height: 60%;
-    color: rgb(230, 224, 224);
+    color: rgb(207, 206, 206);
 }
 
 .card_info{
     display: flex;
     gap: 10px;
+    padding: 8px;
 }
 
 .ravenclaw{
@@ -56,13 +61,13 @@
 }
 
 .hufflepuff{
-    background: linear-gradient(to right, #ECB939, #F0C75E, #726255, #000000);
+    background: linear-gradient(to right, #000000, #ECB939, #F0C75E, #726255, #000000);
 }
 
 .slytherin{
-    background: linear-gradient(to right, #1A472A, #2A623D, #5D5D5D, #000000);
+    background: linear-gradient(to right, #000000, #1A472A, #2A623D, #5D5D5D, #000000);
 }
 
 .gryffindor{
-    background: linear-gradient(to right, #740001, #AE0001, #D3A625, #000000);
+    background: linear-gradient(to right, #000000,#740001, #AE0001, #D3A625, #000000);
 }

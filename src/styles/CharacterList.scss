@@ -6,7 +6,7 @@
     gap: 20px;
 
     &_character {
-        line-height: 10px;
+        padding: 10px;
 
         & img{
             width: 300px;
@@ -16,6 +16,11 @@
                 width: 150px;
                 height: 200px;
             }
+
+            @media (max-width: 1028px) {
+                width: 200px;
+                height: 250px;
+            }
         }
 
         & h3{
@@ -24,5 +29,13 @@
                 font-size: 16px;
             }
         }
+
+        & h3, p{
+            color: silver;
+        }
     }
+}
+
+.enlaces{
+    text-decoration: none;
 }

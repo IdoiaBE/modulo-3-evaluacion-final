@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useNavigate } from "react-router-dom";
 
 function CharacterDetail({filteredCharacters, characterId}) {
+  const navigate = useNavigate();
   
   const characterDetails = filteredCharacters.find((character)=> character.id === characterId)
   // console.log(characterDetails)
@@ -16,13 +17,11 @@ function CharacterDetail({filteredCharacters, characterId}) {
     ? characterDetails.altNames.map((altName, index) => <li key={index}>{altName}</li>)
     : null;
 
-  const navigate = useNavigate();
-
   const houseClass = characterDetails.house.toLowerCase() || "default";
 
   const livingStatus = characterDetails.livingStatus();
-  console.log(livingStatus)
-  // const statusIcon = (livingStatus === "Vivo" || livingStatus === "Viva") ? <i className="bi bi-heart-pulse-fill"></i> : <i className="bi bi-emoji-dizzy-fill"></i>;
+  
+  const statusIcon = (livingStatus === "Vivo" || livingStatus === "Viva") ? <i className="bi bi-emoji-heart-eyes-fill"></i> : <i className="bi bi-emoji-dizzy-fill"></i>;
 
 
   return (
@@ -36,7 +35,7 @@ function CharacterDetail({filteredCharacters, characterId}) {
           <div className="card_info">
             <p>Estatus:</p> 
             <p>{livingStatus}</p>
-            <i className="bi bi-heart-pulse-fill"></i>
+            <p>{statusIcon}</p>
           </div>
           <div className="card_info">
             <p>Especie:</p> 
