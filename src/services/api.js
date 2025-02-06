@@ -16,7 +16,8 @@ const getDataApi = (selectedHouse)=> {
                 id: item.id,
                 img: item.image || placeholderImg,
                 name: item.name,
-                status: isAlive,
+                altNames: item.alternate_names, //es un array
+                livingStatus: isAlive,
                 species: item.species,
                 gender: gender,
                 house: item.house,

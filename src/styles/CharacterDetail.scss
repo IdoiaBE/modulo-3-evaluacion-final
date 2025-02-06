@@ -6,19 +6,50 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    padding: 10px;
+    
 
     & img{
         width: 40%;
         height: 40%;
     }
+
+    & h3{
+        text-transform: uppercase;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+
+    }
+
+    & ul {
+        list-style: none;
+        text-align: right;
+        
+        @media (max-width: 768px) {
+            font-size: 10px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 .card{
-    width: 40%;
-    height: 40%;
+    width: 60%;
+    height: 60%;
+    color: rgb(218, 204, 204);
 }
 
 .card_info{
     display: flex;
     gap: 10px;
+}
+
+.ravenclaw{
+    background: linear-gradient(to right, #0D1E4A, #213264, #5d5d5d, #946a2d);
 }

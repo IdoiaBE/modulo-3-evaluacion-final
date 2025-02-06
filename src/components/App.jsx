@@ -41,7 +41,7 @@ function App() {
         <Route path="/" element={<Home listCharacters={filteredCharacters} changeFilters={changeFilters}
         filters={filters}/>} />
 
-        <Route path="/character/:characterId" element={<CharacterDetail listCharacters={filteredCharacters} characterId={characterUrlId}/>}/>
+        <Route path="/character/:characterId" element={<CharacterDetail filteredCharacters={filteredCharacters} characterId={characterUrlId}/>}/>
         
       </Routes>
     </main>
