@@ -18,17 +18,25 @@ function CharacterDetail({filteredCharacters, characterId}) {
 
   const navigate = useNavigate();
 
+  const houseClass = characterDetails.house.toLowerCase() || "default";
+
+  const livingStatus = characterDetails.livingStatus();
+  console.log(livingStatus)
+  // const statusIcon = (livingStatus === "Vivo" || livingStatus === "Viva") ? <i className="bi bi-heart-pulse-fill"></i> : <i className="bi bi-emoji-dizzy-fill"></i>;
+
+
   return (
     <section className="main_detail">
       <i className="bi bi-box-arrow-in-left detail_back" onClick={() => navigate("/")}></i>
-      <article className="detail_card ravenclaw">
+      <article className={`detail_card ${houseClass}`}>
         <img src={characterDetails.img} alt={altText} />
         <div className="card">
           <h3>{characterDetails.name}</h3>
           <ul>{altNames}</ul>
           <div className="card_info">
             <p>Estatus:</p> 
-            <p>{characterDetails.livingStatus()}</p>
+            <p>{livingStatus}</p>
+            <i className="bi bi-heart-pulse-fill"></i>
           </div>
           <div className="card_info">
             <p>Especie:</p> 
