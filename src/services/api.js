@@ -11,6 +11,14 @@ const getDataApi = (selectedHouse)=> {
 
             const isAlive = () => `${item.alive ? "Viv" : "Muert"}${item.gender === "female" ? "a" : "o"}`;
 
+            const speciesMap = {
+                "human": "Humana",
+                "half-giant": "Mitad gigante",
+                "werewolf": "Hombre lobo",
+                "ghost": "Fantasma"
+            };
+
+            const species = speciesMap[item.species] || "Desconocida";
 
             return {
                 id: item.id,
@@ -18,7 +26,7 @@ const getDataApi = (selectedHouse)=> {
                 name: item.name,
                 altNames: item.alternate_names, //es un array
                 livingStatus: isAlive,
-                species: item.species,
+                species: species,
                 gender: gender,
                 house: item.house,
 
