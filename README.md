@@ -68,17 +68,18 @@ Esto abrirá tu navegador predeterminado y cargará la aplicación.
 ```bash
 npm run build
 ```
-2. Publica la carpeta `docs/` en GitHub Pages:
 
-- Ve a la pestaña "Settings" de tu repositorio.
-- Activa **GitHub Pages** seleccionando la opción **master branch /docs folder**.
-
-También puedes usar el atajo:
+2. Genera la rama `gh-pages` que llevará la versión de producción con:
 
 ```bash
 npm run deploy
 ```
-Esto genera y sube automáticamente la carpeta `docs/` a GitHub Pages.
+
+3. Publica la carpeta `dist/` en GitHub Pages:
+
+- Ve a la pestaña "Settings" de tu repositorio.
+- Entra en **Pages**, en el menú de la izquierda.
+- Seleccionando la rama **gh-pages** y la carpeta **/root**.
 
 ## 📂 Estructura del proyecto
 
@@ -89,13 +90,13 @@ Harry Potter Characters App
 │   ├── styles
 │   └── assets
 ├── public
-└── docs
+└── dist
 
 src/: Código fuente del proyecto.
 
 public/: Archivos estáticos.
 
-docs/: Carpeta generada para el despliegue en GitHub Pages.
+dist/: Carpeta generada para el despliegue en GitHub Pages.
 
 ## 📌 Notas adicionales
 
