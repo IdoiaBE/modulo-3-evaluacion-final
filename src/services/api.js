@@ -7,13 +7,18 @@ const getDataApi = (selectedHouse)=> {
         const cleanData = data.map((item) =>{
             const placeholderImg = `https://placehold.co/300x400?text=${item.name}`
 
+            const gender = item.gender === "female" ? "Mujer" : "Hombre"
+
+            const isAlive = () => `${item.alive ? "Viv" : "Muert"}${item.gender === "female" ? "a" : "o"}`;
+
+
             return {
                 id: item.id,
                 img: item.image || placeholderImg,
                 name: item.name,
-                alive: item.alive,
+                status: isAlive,
                 species: item.species,
-                gender: item.gender,
+                gender: gender,
                 house: item.house,
 
             }
