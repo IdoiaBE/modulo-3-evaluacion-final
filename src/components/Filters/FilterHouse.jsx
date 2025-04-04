@@ -1,3 +1,4 @@
+import "../../styles/Filters.scss"
 import PropTypes from "prop-types"
 
 function FilterHouse({changeFilters, byHouse}) {
@@ -7,7 +8,7 @@ function FilterHouse({changeFilters, byHouse}) {
 
   return (
     <label>
-        Selecciona la casa:
+        <p>Selecciona la casa:</p>
         <select id="house" value={byHouse} onChange={hanldeSelect}>
             <option value="Gryffindor">Gryffindor</option>
             <option value="Hufflepuff">Hufflepuff</option>

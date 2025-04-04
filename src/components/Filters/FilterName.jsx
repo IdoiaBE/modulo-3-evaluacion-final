@@ -1,3 +1,4 @@
+import "../../styles/Filters.scss"
 import PropTypes from "prop-types"
 
 function FilterName({changeFilters, byName}) {
@@ -7,8 +8,8 @@ function FilterName({changeFilters, byName}) {
 
   return (
     <label>
-        Busca por personaje:
-        <input type="text" id="name" value={byName} onChange={handleInput}/>
+      <p>Busca por nombre:</p>
+      <input type="text" placeholder="Escribe aquí..." id="name" value={byName} onChange={handleInput}/>
     </label>
   )
 }

@@ -1,6 +1,12 @@
+
 .header{
-    
-    &_img{
-        width: 100%;
+    height: 30vh;
+    background-image: url(/src/images/Harry-Potter-Silver-Logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+
+    @media (width <= 481px){
+        height: 20vh;
     }
 }

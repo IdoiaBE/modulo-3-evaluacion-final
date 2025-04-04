@@ -17,7 +17,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-  box-sizing: border-box;
+  	box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -44,12 +44,7 @@ table {
 }
 
 #root {
-  max-width: 1280px;
-  text-align: center;
-  background-color: rgb(3, 3, 12);
-}
-
-.main_detail{
-  padding: 20px;
-  margin-top: 40px;
+	min-height: 100vh;
+	font-family:Arial, Helvetica, sans-serif;
+	background-color: black;
 }

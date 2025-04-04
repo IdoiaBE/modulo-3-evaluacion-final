@@ -8,7 +8,7 @@ function CharacterCard({eachCharacter}) {
   return (
     
     <article className="main_list_character">
-      <Link to={`/character/${eachCharacter.id}`} className="enlaces">
+      <Link to={`/character/${eachCharacter.id}`} className="links">
         <img
         src={eachCharacter.img} 
         alt={altText} />
